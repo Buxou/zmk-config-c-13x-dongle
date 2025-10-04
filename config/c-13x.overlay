@@ -1,4 +1,4 @@
-/*
+ *
  * Copyright (c) 2024 Your Name
  *
  * SPDX-License-Identifier: MIT
@@ -57,3 +57,4 @@
         };
     };
 };
+
