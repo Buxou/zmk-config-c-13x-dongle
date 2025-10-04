@@ -1,0 +1,6 @@
+if SHIELD_C-13X
+
+config ZMK_KEYBOARD_NAME
+    default "c-13x"
+
+    endif
