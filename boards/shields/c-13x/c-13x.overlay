@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <dt-bindings/zmk/matrix-transform.h>
+#include <dt-bindings/zmk/matrix_transform.h>
 
 / {
     chosen {
@@ -72,5 +72,6 @@
     // ch0-pin = <10>; // Пример пина для PWM
     // ch0-inverted;
 };
+
 
 
