@@ -29,10 +29,6 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
 
-        // Настройки для снижения дребезга
-        debounce-press-ms = <5>;
-        debounce-release-ms = <5>;
-
         // Пины для строк (рядов) - обычно подтянуты к земле
         row-gpios
             = <&pro_micro 1 GPIO_ACTIVE_HIGH>
@@ -76,4 +72,5 @@
     // ch0-pin = <10>; // Пример пина для PWM
     // ch0-inverted;
 };
+
 
