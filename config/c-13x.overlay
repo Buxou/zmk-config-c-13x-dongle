@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <dt-bindings/zmk/matrix-transform.h>
+#include <dt-bindings/zmk/matrix_transform.h>
 
 / {
     chosen {
@@ -13,7 +13,7 @@
     };
 
     default_transform: keymap_transform_0 {
-        compatible = "zmk,matrix-transform";
+        compatible = "zmk,matrix_transform";
         rows = <4>;
         columns = <10>;
         // 35 keys out of 40 possible positions
@@ -54,25 +54,6 @@
             , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
-    };
-
-    // Настройки для RGB подсветки (если есть)
-    led_indicator {
-        compatible = "pwm-leds";
-        label = "RGB LED";
-        
-        // Пример для одного светодиода
-        rgb_led: pwm_led_0 {
-            pwms = <&pwm0 0 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
-            label = "RGB LED";
         };
     };
-};
-
-// Настройки для энкодера (если есть)
-&pwm0 {
-    status = "okay";
-    // Настройки ШИМ для подсветки
-    // ch0-pin = <10>; // Пример пина для PWM
-    // ch0-inverted;
 };
