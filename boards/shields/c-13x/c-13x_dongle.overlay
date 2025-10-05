@@ -26,4 +26,18 @@
             RC(3,0)  RC(3,1)           RC(3,3)           RC(3,5)           RC(3,7)           RC(3,9)
         >;
     };
+
+/ {
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        transform = <&default_transform>;
+    };
+};
+
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+        zmk,physical-layout = &physical_layout0;  // New item added
+    };
 };
