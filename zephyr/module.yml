@@ -1,3 +1,5 @@
+name: zmk-keyboard-C-13X
 build:
   settings:
     board_root: .
+
