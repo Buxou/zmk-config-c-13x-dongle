@@ -26,3 +26,9 @@ config BT_MAX_PAIRED
 endif
 
 if SHIELD_C-13X_DONGLE || SHIELD_C-13X_CENTRAL || SHIELD_C-13C_PERIPHERAL
+
+config ZMK_SPLIT
+   
+default n
+
+endif
