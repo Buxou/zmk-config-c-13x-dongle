@@ -29,8 +29,9 @@ if SHIELD_C-13X_DONGLE || SHIELD_C-13X_CENTRAL || SHIELD_C-13X_PERIPHERAL
 
 config ZMK_SPLIT
    
-default n
+default y
 
 endif
+
 
 
