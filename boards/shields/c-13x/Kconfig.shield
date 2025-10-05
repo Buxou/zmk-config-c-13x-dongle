@@ -1,9 +1,10 @@
 config SHIELD_C-13X_CENTER
-    def_bool $(shields_list_contains, c-13x)
+    def_bool $(shields_list_contains, c-13x_center)
 
 config SHIELD_C-13X_DONGLE
     def_bool $(shields_list_contains,c-13x_dongle)
 
 config SHIELD_C-13X_PERIPHERAL
     def_bool $(shields_list_contains, c-13x_peripheral)
+
 
