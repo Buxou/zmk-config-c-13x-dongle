@@ -1,4 +1,4 @@
-if SHIELD_C-13X_DONGLE
+if SHIELD_C-13X_DONGLE || SHIELD_C-13X_CENTRAL
 
 # Max 16 characters in keyboard name
 config ZMK_KEYBOARD_NAME
@@ -24,3 +24,5 @@ config BT_MAX_PAIRED
     default 5
 
 endif
+
+if SHIELD_C-13X_DONGLE || SHIELD_C-13X_CENTRAL || SHIELD_C-13C_PERIPHERAL
