@@ -28,12 +28,13 @@ include:
   - board: nice_nano_v2
     shield: c-13x_peripheral
     cmake-args:  -DCONFIG_ZMK_SPLIT=n -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-    - board: nice_nano_v2
+  - board: nice_nano_v2
     shield: c-13x
-    cmake-args:  -DCONFIG_ZMK_SPLIT=n -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    cmake-args:  -DCONFIG_ZMK_SPLIT=n -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
   - board: nice_nano_v2
     shield: settings_reset
     cmake-args:  -DCONFIG_ZMK_SPLIT=n -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+
 
 
 
