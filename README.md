@@ -8,9 +8,10 @@ The firmware is in the testing stage, because I don’t have enough nice!nano v2
   - board: nice_nano_v2:
     - shield: c-13x_dongle: not fully tested.
     - shield: c-13x_central: not fully tested.
+
 - Variant without dongle
   - board: nice_nano_v2: 
-    - shield: c-13x_peripheral: not tested.
+    - shield: c-13x_peripheral: not tested. I'm also not very sure that this option is needed.
     - shield: c-13x: not tested.
 
 - Wired option
