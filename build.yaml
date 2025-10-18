@@ -30,14 +30,13 @@ include:
     cmake-args:  -DCONFIG_ZMK_SPLIT=n -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   - board: nice_nano_v2
     shield: c-13x
-    cmake-args:  -DCONFIG_ZMK_SPLIT=n -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
   - board: nice_nano_v2
     shield: settings_reset
-    cmake-args:  -DCONFIG_ZMK_SPLIT=n -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   - board: adafruit_kb2040
     shield: c-13x
   - board: adafruit_kb2040
     shield: settings_reset
+
 
 
 
