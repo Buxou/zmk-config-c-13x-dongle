@@ -17,9 +17,24 @@
     combos {
         compatible = "zmk,combos";
 
+        semicolon {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <9 18>;
+        };
+
+        apostrophe {
+            bindings = <&kp SQT>;
+            key-positions = <18 28>;
+        };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <32 33>;
+        };
+
         language {
             bindings = <&kp LS(LALT)>;
-            key-positions = <32 33>;
+            key-positions = <32 34>;
         };
     };
 
