@@ -26,9 +26,6 @@ include:
     shield: c-13x_central
     cmake-args:  -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
   - board: nice_nano_v2
-    shield: c-13x_peripheral
-    cmake-args:  -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-  - board: nice_nano_v2
     shield: c-13x
   - board: nice_nano_v2
     shield: settings_reset
@@ -36,6 +33,7 @@ include:
     shield: c-13x
   - board: sparkfun_pro_micro_rp2040
     shield: settings_reset
+
 
 
 
