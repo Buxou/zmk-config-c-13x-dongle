@@ -20,13 +20,9 @@
     };
 
     kscan0: kscan {
-        label = "KSCAN";
-        diode-direction = "col2row";
-    };
-
-    kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
+        diode-direction = "col2row";
 
         // Пины для строк (рядов) - обычно подтянуты к земле
         row-gpios
@@ -51,6 +47,7 @@
             ;
     };
 };
+
 
 
 
