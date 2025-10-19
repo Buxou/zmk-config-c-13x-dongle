@@ -6,17 +6,16 @@ The firmware is in the testing stage, because I don’t have enough nice!nano v2
 
 - Variant with dongle:
   - board: nice_nano_v2:
-    - shield: c-13x_dongle: not fully tested.
-    - shield: c-13x_central: not fully tested.
+    - shield: c-13x_dongle: tested, fully functional.
+    - shield: c-13x_central: tested, fully functional.
 
-- Variant without dongle
-  - board: nice_nano_v2: 
-    - shield: c-13x_peripheral: not tested. I'm also not very sure that this option is needed.
-    - shield: c-13x: not tested.
+- Variant without dongle:
+    - board: nice_nano_v2: 
+    - shield: c-13x: tested, fully functional.
 
-- Wired option
+- Wired option:
   - board: adafruit_kb2040
-    - shield: c-13x: check, work.
+    - shield: c-13x: checked, problems with the layout.
   
 
 <img width="875" height="424" alt="image" src="https://github.com/user-attachments/assets/3f893f0e-f72b-45be-97f3-608652085af9" />
