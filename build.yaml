@@ -32,10 +32,11 @@ include:
     shield: c-13x
   - board: nice_nano_v2
     shield: settings_reset
-  - board: adafruit_kb2040
+  - board: sparkfun_pro_micro_rp2040
     shield: c-13x
-  - board: adafruit_kb2040
+  - board: sparkfun_pro_micro_rp2040
     shield: settings_reset
+
 
 
 
