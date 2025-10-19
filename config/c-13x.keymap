@@ -14,15 +14,24 @@
 &mt { quick-tap-ms = <200>; };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        language {
+            bindings = <&kp LS(LALT)>;
+            key-positions = <32 33>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q      &kp W      &kp E  &kp R      &kp T  &kp Y      &kp U  &kp I            &kp O    &kp P
-&kp A      &kp S      &kp D  &kp F      &kp G  &kp H      &kp J  &kp K                     &kp L
-&kp Z      &kp X      &kp C  &kp V      &kp B  &kp N      &kp M  &kp COMMA        &kp DOT  &kp FSLH
-&kp LCTRL  &lt 2 ESC         &kp SPACE         &kp ENTER         &lt 1 BACKSPACE           &kp LALT
+&mt RIGHT_BRACKET Q  &kp W      &kp E  &kp R             &kp T  &kp Y          &kp U  &kp I            &kp O    &mt LEFT_BRACKET P
+&kp A                &kp S      &kp D  &kp F             &kp G  &kp H          &kp J  &kp K                     &kp L
+&kp Z                &kp X      &kp C  &kp V             &kp B  &kp N          &kp M  &kp COMMA        &kp DOT  &mt BACKSLASH SLASH
+&kp LCTRL            &lt 2 ESC         &mt LSHIFT SPACE         &mt TAB ENTER         &lt 1 BACKSPACE           &kp LALT
             >;
 
             label = "MAIN";
