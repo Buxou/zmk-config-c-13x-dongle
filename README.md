@@ -14,8 +14,8 @@ The firmware is in the testing stage, because I don’t have enough nice!nano v2
     - shield: c-13x: tested, fully functional.
 
 - Wired option:
-  - board: adafruit_kb2040
-    - shield: c-13x: checked, problems with the layout.
+  - board: sparkfun_pro_micro_rp2040
+    - shield: c-13x: tested, fully functional.
   
 
 <img width="875" height="424" alt="image" src="https://github.com/user-attachments/assets/3f893f0e-f72b-45be-97f3-608652085af9" />
