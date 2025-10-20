@@ -23,8 +23,8 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         diode-direction = "col2row";
-		debounce-press-ms = <5>;
-		debounce-release-ms = <5>;
+		debounce-press-ms = <10>;
+		debounce-release-ms = <10>;
 
         // Пины для строк (рядов) - обычно подтянуты к земле
          row-gpios
@@ -49,6 +49,7 @@
             ;
     };
 };
+
 
 
 
