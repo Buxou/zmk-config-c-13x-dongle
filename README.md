@@ -7,7 +7,7 @@ The firmware is in the testing stage, because I don’t have enough nice!nano v2
 - Variant with dongle:
   - board: nice_nano_v2:
     - shield: c-13x_dongle: tested, fully functional.
-    - shield: c-13x_central: tested, fully functional.
+    - shield: c-13x_peripheral: tested, fully functional.
 
 - Variant without dongle:
     - board: nice_nano_v2: 
