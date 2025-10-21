@@ -33,10 +33,9 @@ include:
     shield: c-13x
   - board: sparkfun_pro_micro_rp2040
     shield: settings_reset
----
-include:
   - board: nice_nano_v2
     shield: sweep_central_dongle dongle_display
+
 
 
 
