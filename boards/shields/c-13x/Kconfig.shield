@@ -6,8 +6,3 @@ config SHIELD_C-13X_DONGLE
 
 config SHIELD_C-13X_PERIPHERAL
     def_bool $(shields_list_contains, c-13x_peripheral)
-
-config SHIELD_DONGLE_DISPLAY
-	def_bool $(shields_list_contains,dongle_display)
-
-
