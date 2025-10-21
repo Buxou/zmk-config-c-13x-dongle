@@ -18,7 +18,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: englmaxi
-      url-base: https://github.com/Buxou
+      url-base: https://github.com/englmaxi
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -29,4 +29,5 @@ manifest:
       revision: main
   self:
     path: config
+
 
