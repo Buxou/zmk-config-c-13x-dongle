@@ -45,7 +45,7 @@
             bindings = <
 &mt RIGHT_BRACKET Q  &kp W      &kp E  &kp R             &kp T  &kp Y          &kp U  &kp I            &kp O    &mt LEFT_BRACKET P
 &kp A                &kp S      &kp D  &kp F             &kp G  &kp H          &kp J  &kp K                     &mt SEMICOLON L
-&kp Z                &kp X      &kp C  &kp V             &kp B  &lt 3 N        &kp M  &kp COMMA        &kp DOT  &mt BACKSLASH SLASH
+&kp Z                &kp X      &kp C  &kp V             &kp B  &lt 4 N        &kp M  &kp COMMA        &kp DOT  &mt BACKSLASH SLASH
 &kp LCTRL            &lt 2 ESC         &mt LSHIFT SPACE         &mt TAB ENTER         &lt 1 BACKSPACE           &kp LALT
             >;
 
