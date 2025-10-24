@@ -106,7 +106,7 @@
         };
 
         adjust2 {
-            if-layers = <3 4>;
+            if-layers = <4>;
             then-layer = <4>;
         };
     };
