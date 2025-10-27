@@ -87,10 +87,10 @@
 
         adjust_layer_2 {
             bindings = <
-&trans     &kp UP         &trans     &trans  &trans  &kp C_PREVIOUS  &kp C_STOP  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans
-&kp LEFT   &kp DOWN       &kp RIGHT  &trans  &trans  &kp LEFT        &kp UP      &kp RIGHT                     &trans
-&kp LG(R)  &kp LC(LS(R))  &trans     &trans  &trans  &trans          &trans      &kp DOWN          &trans      &kp UNDERSCORE
-&trans     &trans                    &trans          &trans                      &trans                        &trans
+&trans     &kp UP           &trans     &trans  &trans  &kp C_PREVIOUS  &kp C_STOP  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans
+&kp LEFT   &kp DOWN         &kp RIGHT  &trans  &trans  &kp LEFT        &kp UP      &kp RIGHT                     &trans
+&kp LG(R)  &kp LC(LS(ESC))  &trans     &trans  &trans  &trans          &trans      &kp DOWN          &trans      &kp UNDERSCORE
+&trans     &trans                      &trans          &trans                      &trans                        &trans
             >;
 
             label = "ADJ_2";
