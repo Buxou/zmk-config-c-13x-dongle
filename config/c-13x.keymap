@@ -27,10 +27,9 @@
             key-positions = <32 33>;
         };
 
-        Language {
-            bindings = <&kp LS(LEFT_ALT)>;
-            key-positions = <34 32>;
-            timeout-ms = <0>;
+        language {
+            bindings = <&kp LS(LALT)>;
+            key-positions = <32 34>;
         };
     };
 
