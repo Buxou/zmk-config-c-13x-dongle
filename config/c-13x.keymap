@@ -11,7 +11,10 @@
 
 &lt { quick-tap-ms = <200>; };
 
-&mt { quick-tap-ms = <200>; };
+&mt {
+    quick-tap-ms = <200>;
+    tapping-term-ms = <100>;
+};
 
 / {
     combos {
@@ -19,7 +22,7 @@
 
         apostrophe {
             bindings = <&kp SQT>;
-            key-positions = <18 28>;
+            key-positions = <18 33>;
         };
 
         delete {
