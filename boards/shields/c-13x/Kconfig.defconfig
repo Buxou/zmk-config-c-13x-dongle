@@ -1,5 +1,4 @@
-if SHIELD_C-13X_DONGLE || SHIELD_C-13X_CENTRAL
-
+if SHIELD_C-13X_DONGLE || SHIELD_C-13X
 # Max 16 characters in keyboard name
 config ZMK_KEYBOARD_NAME
     default "C-13X"
@@ -31,6 +30,7 @@ config ZMK_SPLIT
 default y
 
 endif
+
 
 
 
