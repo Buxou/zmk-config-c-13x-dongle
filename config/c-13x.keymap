@@ -30,14 +30,15 @@
             key-positions = <32 33>;
         };
 
-        language {
-            bindings = <&kp LS(LALT)>;
-            key-positions = <32 34>;
-        };
-
         win {
             bindings = <&kp LEFT_GUI>;
             key-positions = <27 28>;
+        };
+
+        language {
+            bindings = <&kp LS(LEFT_ALT)>;
+            key-positions = <34 32>;
+            require-prior-idle-ms = <165>;
         };
     };
 
