@@ -12,19 +12,34 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        // Перенаправляем вывод на физический лейаут для ZMK Studio
-        zmk,physical-layout = &studio_layout;
+        /* Убираем отсюда zmk,matrix_transform, так как он уходит в physical-layout */
+        zmk,physical-layout = &default_layout;
     };
 
-    // Автоматическая генерация сетки клавиш на основе вашего matrix-transform
-    studio_layout: studio_layout {
+    default_layout: default_layout {
         compatible = "zmk,physical-layout";
-        display-name = "C-13X";
-        transform = <&default_transform>;
+        display-name = "C-13X Layout";
+        transform = <&default_transform>; // Ссылка на трансформацию из оверлея
+
+        keys {
+            compatible = "zmk,physical-layout-keys";
+            
+            // Чистый массив параметров без макросов для старой ветки Студии.
+            // Формат: <строка_матрицы столбец_матрицы X Y>
+            bindings = <
+                <0 0 0 0> <0 1 0 0> <0 2 0 0> <0 3 0 0> <0 4 0 0> <0 5 0 0> <0 6 0 0> <0 7 0 0> <0 8 0 0> <0 9 0 0>
+                <1 0 0 0> <1 1 0 0> <1 2 0 0> <1 3 0 0> <1 4 0 0> <1 5 0 0> <1 6 0 0> <1 7 0 0>           <1 9 0 0>
+                <2 0 0 0> <2 1 0 0> <2 2 0 0> <2 3 0 0> <2 4 0 0> <2 5 0 0> <2 6 0 0> <2 7 0 0> <2 8 0 0> <2 9 0 0>
+                <3 0 0 0> <3 1 0 0>           <3 3 0 0>           <3 5 0 0>           <3 7 0 0>           <3 9 0 0>
+            >;
+        };
     };
 };
 
 &lt { quick-tap-ms = <200>; };
+
+// ... далее весь ваш остальной код keymap (combos, слои MAIN, SYM, NUM, ADJ и т.д.) без изменений ...
+
 
 &mt {
     quick-tap-ms = <200>;
