@@ -31,6 +31,15 @@ default y
 
 endif
 
+if SHIELD_C_13X || SHIELD_C_13X_DONGLE
+
+config ZMK_STUDIO_LOCKING
+    bool
+    default n
+
+endif
+
+
 
 
 
