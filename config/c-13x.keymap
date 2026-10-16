@@ -23,19 +23,16 @@
         keys {
             compatible = "zmk,physical-layout-keys";
             
-            // Описываем каждую из 35 клавиш через свойства index и matrix.
-            // Формат: matrix = <строка столбец>;
             k00 { matrix = <0 0>; }; k01 { matrix = <0 1>; }; k02 { matrix = <0 2>; }; k03 { matrix = <0 3>; }; k04 { matrix = <0 4>; }; k05 { matrix = <0 5>; }; k06 { matrix = <0 6>; }; k07 { matrix = <0 7>; }; k08 { matrix = <0 8>; }; k09 { matrix = <0 9>; };
             k10 { matrix = <1 0>; }; k11 { matrix = <1 1>; }; k12 { matrix = <1 2>; }; k13 { matrix = <1 3>; }; k14 { matrix = <1 4>; }; k15 { matrix = <1 5>; }; k16 { matrix = <1 6>; }; k17 { matrix = <1 7>; };                          k19 { matrix = <1 9>; };
             k20 { matrix = <2 0>; }; k21 { matrix = <2 1>; }; k22 { matrix = <2 2>; }; k23 { matrix = <2 3>; }; k24 { matrix = <2 4>; }; k25 { matrix = <2 5>; }; k26 { matrix = <2 6>; }; k27 { matrix = <2 7>; }; k28 { matrix = <2 8>; }; k29 { matrix = <2 9>; };
             k30 { matrix = <3 0>; }; k31 { matrix = <3 1>; };                          k33 { matrix = <3 3>; };                          k35 { matrix = <3 5>; };                          k37 { matrix = <3 7>; };                          k39 { matrix = <3 9>; };
         };
     };
-
-
-
+};
 
 &lt { quick-tap-ms = <200>; };
+
 
 // ... далее весь ваш остальной код keymap (combos, слои MAIN, SYM, NUM, ADJ и т.д.) без изменений ...
 
