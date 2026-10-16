@@ -15,20 +15,10 @@
         zmk,physical-layout = &studio_layout;
     };
 
-    studio_layout: studio_layout {
-        compatible = "zmk,physical-layout";
-        display-name = "C-13X";
-        transform = <&default_transform>;
-
-        // Для старого компилятора передаем 35 phandle-ссылок на узел трансформации.
-        // Это заставит макрос проверки размера массива в physical_layouts.c 
-        // увидеть ровно 35 элементов и успешно завершить сборку.
-        keys = <
-            &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform
-            &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform                    &default_transform
-            &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform
-            &default_transform &default_transform                    &default_transform                    &default_transform                    &default_transform                    &default_transform
-        >;
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,matrix_transform = &default_transform;
     };
 };
 
