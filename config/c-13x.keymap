@@ -9,6 +9,20 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        // Перенаправляем вывод на физический лейаут для ZMK Studio
+        zmk,physical-layout = &studio_layout;
+    };
+
+    // Автоматическая генерация сетки клавиш на основе вашего matrix-transform
+    studio_layout: studio_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "C-13X";
+        transform = <&default_transform>;
+    };
+};
 
 &lt { quick-tap-ms = <200>; };
 
