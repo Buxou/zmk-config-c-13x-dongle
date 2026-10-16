@@ -1,12 +1,8 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/dt-util.h> // Позволяет читать GPIO макросы в оверлее
 
 / {
-    chosen {
-        zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
-    };
-
-    default_transform: keymap_transform_0 {
+    default_transform: default_transform {
         compatible = "zmk,matrix-transform";
         rows = <4>;
         columns = <10>;
@@ -22,20 +18,18 @@
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
-		wakeup-source;
+        wakeup-source;
         diode-direction = "col2row";
-		debounce-press-ms = <10>;
-		debounce-release-ms = <10>;
+        debounce-press-ms = <10>;
+        debounce-release-ms = <10>;
 
-        // Пины для строк (рядов) - обычно подтянуты к земле
-         row-gpios
+        row-gpios
             = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
         
-        // Пины для колонок - обычно с подтяжкой к питанию
         col-gpios
             = <&pro_micro 7 GPIO_ACTIVE_HIGH>
             , <&pro_micro 6 GPIO_ACTIVE_HIGH>
@@ -50,17 +44,3 @@
             ;
     };
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
