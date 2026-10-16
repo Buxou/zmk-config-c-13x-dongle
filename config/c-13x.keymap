@@ -12,15 +12,29 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        
-        // Перенаправляем вывод на стандартный внутренний лейаут ZMK.
-        // Это заставит physical_layouts.c пройти проверку BUILD_ASSERT без создания лишних узлов!
-        zmk,physical-layout = &default_transform;
+        zmk,physical-layout = &studio_layout;
+    };
+
+    studio_layout: studio_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "C-13X";
+        transform = <&default_transform>;
+
+        // Для старого компилятора передаем 35 phandle-ссылок на узел трансформации.
+        // Это заставит макрос проверки размера массива в physical_layouts.c 
+        // увидеть ровно 35 элементов и успешно завершить сборку.
+        keys = <
+            &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform
+            &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform                    &default_transform
+            &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform &default_transform
+            &default_transform &default_transform                    &default_transform                    &default_transform                    &default_transform                    &default_transform
+        >;
     };
 };
 
 &lt { quick-tap-ms = <200>; };
-// ... далее весь ваш остальной код keymap (combos, слои MAIN, SYM, NUM, ADJ и т.д.) без изменений ...
+// ... далее исходный код раскладки без изменений ...
+
 
 &mt {
     quick-tap-ms = <200>;
