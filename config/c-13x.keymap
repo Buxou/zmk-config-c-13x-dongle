@@ -12,8 +12,9 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+        zmk,matrix_transform = &default_transform; // Убедитесь, что здесь нет упоминаний physical-layout или c13x_layout!
     };
+
 };
 
 &lt { quick-tap-ms = <200>; };
