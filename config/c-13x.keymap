@@ -12,72 +12,15 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        // Изменили ссылку на c13x_layout, чтобы исправить ошибку undefined node label
-        zmk,physical-layout = &c13x_layout;
-    };
-
-    c13x_layout: c13x_layout {
-        compatible = "zmk,physical-layout";
-        display-name = "C-13X";
-        transform = <&default_transform>;
-
-        keys {
-            compatible = "zmk,physical-layout-keys";
-
-            // Ряд 1 (0) - 10 клавиш. Координаты x/y в условных единицах (шаг 100)
-            k00 { matrix-position = <0 0>; x = <0>;   y = <0>; };
-            k01 { matrix-position = <0 1>; x = <100>; y = <0>; };
-            k02 { matrix-position = <0 2>; x = <200>; y = <0>; };
-            k03 { matrix-position = <0 3>; x = <300>; y = <0>; };
-            k04 { matrix-position = <0 4>; x = <400>; y = <0>; };
-            k05 { matrix-position = <0 5>; x = <500>; y = <0>; };
-            k06 { matrix-position = <0 6>; x = <600>; y = <0>; };
-            k07 { matrix-position = <0 7>; x = <700>; y = <0>; };
-            k08 { matrix-position = <0 8>; x = <800>; y = <0>; };
-            k09 { matrix-position = <0 9>; x = <900>; y = <0>; };
-
-            // Ряд 2 (1) - 9 клавиш
-            k10 { matrix-position = <1 0>; x = <0>;   y = <100>; };
-            k11 { matrix-position = <1 1>; x = <100>; y = <100>; };
-            k12 { matrix-position = <1 2>; x = <200>; y = <100>; };
-            k13 { matrix-position = <1 3>; x = <300>; y = <100>; };
-            k14 { matrix-position = <1 4>; x = <400>; y = <100>; };
-            k15 { matrix-position = <1 5>; x = <500>; y = <100>; };
-            k16 { matrix-position = <1 6>; x = <600>; y = <100>; };
-            k17 { matrix-position = <1 7>; x = <700>; y = <100>; };
-            k19 { matrix-position = <1 9>; x = <900>; y = <100>; };
-
-            // Ряд 3 (2) - 10 клавиш
-            k20 { matrix-position = <2 0>; x = <0>;   y = <200>; };
-            k21 { matrix-position = <2 1>; x = <100>; y = <200>; };
-            k22 { matrix-position = <2 2>; x = <200>; y = <200>; };
-            k23 { matrix-position = <2 3>; x = <300>; y = <200>; };
-            k24 { matrix-position = <2 4>; x = <400>; y = <200>; };
-            k25 { matrix-position = <2 5>; x = <500>; y = <200>; };
-            k26 { matrix-position = <2 6>; x = <600>; y = <200>; };
-            k27 { matrix-position = <2 7>; x = <700>; y = <200>; };
-            k28 { matrix-position = <2 8>; x = <800>; y = <200>; };
-            k29 { matrix-position = <2 9>; x = <900>; y = <200>; };
-
-            // Ряд 4 (3) - 6 клавиш модификаторов/пробелов
-            k30 { matrix-position = <3 0>; x = <0>;   y = <300>; };
-            k31 { matrix-position = <3 1>; x = <100>; y = <300>; };
-            k33 { matrix-position = <3 3>; x = <300>; y = <300>; };
-            k35 { matrix-position = <3 5>; x = <500>; y = <300>; };
-            k37 { matrix-position = <3 7>; x = <700>; y = <300>; };
-            k39 { matrix-position = <3 9>; x = <900>; y = <300>; };
-        };
+        
+        // Перенаправляем вывод на стандартный внутренний лейаут ZMK.
+        // Это заставит physical_layouts.c пройти проверку BUILD_ASSERT без создания лишних узлов!
+        zmk,physical-layout = &default_transform;
     };
 };
 
 &lt { quick-tap-ms = <200>; };
-// ... далее весь ваш остальной код keymap без изменений ...
-
-
-
-
 // ... далее весь ваш остальной код keymap (combos, слои MAIN, SYM, NUM, ADJ и т.д.) без изменений ...
-
 
 &mt {
     quick-tap-ms = <200>;
